@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="unit_tests">
+      <UniqueIdentifier>{ecb10ca6-25a0-4e8a-bd34-21503922dd45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{5d3f7430-46fa-45b1-a554-dd86b84aa068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers">
+      <UniqueIdentifier>{19acce36-1923-416a-bada-e1dbb61b3cf1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\math_constants.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\sse_macros.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\stdafx.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\trig_functions.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="unit_tests\trig_functions_t.h">
+      <Filter>unit_tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\trig_functions_.asm">
+      <Filter>src</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
