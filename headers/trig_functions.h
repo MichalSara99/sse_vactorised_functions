@@ -5,14 +5,18 @@
 #include"sse_macros.h"
 
 
-extern "C" bool pcos_sse_(double const* x, int n, double* result);
-
+extern "C" bool cos_sse_pd(double const* x, int n, double* out);
+extern "C" bool cos_sse_ps(float const* x, int n, float* out);
 
 
 namespace packed_sse {
 
-	bool pcos_sse(double const* x, int evenSize, double* result) {
-		return pcos_sse_(x, evenSize, result);
+	bool cos_sse_packed(double const* x, int size2, double* result) {
+		return cos_sse_pd(x, size2, result);
+	}
+
+	bool cos_sse_packed(float const* x, int size4, float* result) {
+		return cos_sse_ps(x, size4, result);
 	}
 
 
