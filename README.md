@@ -2,8 +2,8 @@
 Just a little library consisting of vectorised basic math functions written in Assembly x86 and calling in C++.
 
 ## List
-* sin,cos
-* exp
+* sin, cos (SPFP,DPFP)
+* exp (SPFP,DPFP)
 
 ## Usage
 Just started.
