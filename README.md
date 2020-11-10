@@ -1,5 +1,9 @@
 # SSE Vectorised Functions
-Just a little library consisting of basic trig functions written in Assembly x86 and calling in C++.
+Just a little library consisting of vectorised basic math functions written in Assembly x86 and calling in C++.
+
+## List
+* sin,cos
+* exp
 
 ## Usage
 Just started.
