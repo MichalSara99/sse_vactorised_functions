@@ -19,10 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\exp_functions.h" />
     <ClInclude Include="headers\math_constants.h" />
     <ClInclude Include="headers\sse_macros.h" />
     <ClInclude Include="headers\stdafx.h" />
     <ClInclude Include="headers\trig_functions.h" />
+    <ClInclude Include="headers\sse_utilities.h" />
+    <ClInclude Include="unit_tests\exp_functions_t.h" />
     <ClInclude Include="unit_tests\trig_functions_t.h" />
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +33,7 @@
     <ClCompile Include="src\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="src\exp_functions_.asm" />
     <MASM Include="src\trig_functions_.asm" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

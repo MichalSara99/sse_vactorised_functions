@@ -5,9 +5,9 @@
 #include<iostream>
 #include<iomanip>
 #include<chrono>
-#include<new>
 #include<random>
 
+#include"headers/sse_utilities.h"
 #include"headers/math_constants.h"
 #include"headers/trig_functions.h"
 #include"headers/sse_macros.h"
@@ -15,15 +15,18 @@
 using math_constants::pi;
 using packed_sse::cos_sse_packed;
 using packed_sse::sin_sse_packed;
+using sse_utilities::aligned_alloc;
+using sse_utilities::aligned_free;
 
 
 void testBasicSinSSEDouble() {
 
 	int const n = 16;
+	std::size_t const align = 16;
 
-	double* x = (double*)operator new[](sizeof(double)* n, std::align_val_t(16));
-	double* res1 = (double*)operator new[](sizeof(double)* n, std::align_val_t(16));
-	double* res2 = (double*)operator new[](sizeof(double)* n, std::align_val_t(16));
+	double* x = aligned_alloc<double>(n, align);
+	double *res1 = aligned_alloc<double>(n, align);
+	double* res2 = aligned_alloc<double>(n, align);
 
 	// test some basic known values:
 
@@ -69,19 +72,20 @@ void testBasicSinSSEDouble() {
 	std::cout << "\n" << "Elapsed (C++): " << elapsed_cpp;
 	std::cout << "\n" << "Elapsed (Assembly): " << elapsed_asm << "\n";
 
-	_aligned_free(x);
-	_aligned_free(res1);
-	_aligned_free(res2);
+	aligned_free(x);
+	aligned_free(res1);
+	aligned_free(res2);
 }
 
 
 void testBasicSinSSEFloat() {
 
 	int const n = 16;
+	std::size_t const align = 16;
 
-	float* x = (float*)operator new[](sizeof(float)* n, std::align_val_t(16));
-	float* res1 = (float*)operator new[](sizeof(float)* n, std::align_val_t(16));
-	float* res2 = (float*)operator new[](sizeof(float)* n, std::align_val_t(16));
+	double* x = aligned_alloc<double>(n, align);
+	double* res1 = aligned_alloc<double>(n, align);
+	double* res2 = aligned_alloc<double>(n, align);
 
 	// test some basic known values:
 
@@ -127,9 +131,9 @@ void testBasicSinSSEFloat() {
 	std::cout << "\n" << "Elapsed (C++): " << elapsed_cpp;
 	std::cout << "\n" << "Elapsed (Assembly): " << elapsed_asm << "\n";
 
-	_aligned_free(x);
-	_aligned_free(res1);
-	_aligned_free(res2);
+	aligned_free(x);
+	aligned_free(res1);
+	aligned_free(res2);
 }
 
 
@@ -137,10 +141,11 @@ void testBasicSinSSEFloat() {
 void testBasicCosSSEDouble() {
 
 	int const n = 16;
+	std::size_t const align = 16;
 
-	double* x = (double*)operator new[](sizeof(double)* n, std::align_val_t(16));
-	double* res1 = (double*)operator new[](sizeof(double)* n, std::align_val_t(16));
-	double* res2 = (double*)operator new[](sizeof(double)* n, std::align_val_t(16));
+	double* x = aligned_alloc<double>(n, align);
+	double* res1 = aligned_alloc<double>(n, align);
+	double* res2 = aligned_alloc<double>(n, align);
 
 	// test some basic known values:
 
@@ -186,19 +191,20 @@ void testBasicCosSSEDouble() {
 	std::cout << "\n" << "Elapsed (C++): " << elapsed_cpp;
 	std::cout << "\n" << "Elapsed (Assembly): " << elapsed_asm << "\n";
 
-	_aligned_free(x);
-	_aligned_free(res1);
-	_aligned_free(res2);
+	aligned_free(x);
+	aligned_free(res1);
+	aligned_free(res2);
 }
 
 
 void testBasicCosSSEFloat() {
 
 	int const n = 16;
+	std::size_t const align = 16;
 
-	float* x = (float*)operator new[](sizeof(float)* n, std::align_val_t(16));
-	float* res1 = (float*)operator new[](sizeof(float)* n, std::align_val_t(16));
-	float* res2 = (float*)operator new[](sizeof(float)* n, std::align_val_t(16));
+	double* x = aligned_alloc<double>(n, align);
+	double* res1 = aligned_alloc<double>(n, align);
+	double* res2 = aligned_alloc<double>(n, align);
 
 	// test some basic known values:
 
@@ -244,9 +250,9 @@ void testBasicCosSSEFloat() {
 	std::cout << "\n" << "Elapsed (C++): " << elapsed_cpp;
 	std::cout << "\n" << "Elapsed (Assembly): " << elapsed_asm << "\n";
 
-	_aligned_free(x);
-	_aligned_free(res1);
-	_aligned_free(res2);
+	aligned_free(x);
+	aligned_free(res1);
+	aligned_free(res2);
 }
 
 

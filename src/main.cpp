@@ -3,14 +3,28 @@
 
 
 #include"unit_tests/trig_functions_t.h"
-
+#include"unit_tests/exp_functions_t.h"
 
 int main(int argc, char const* argv[]) {
 
-	testBasicSinSSEDouble();
+	// ===================================================
+	// ================ trig_functions_t.h ===============
+
+	// testBasicSinSSEDouble();
+	// testBasicSinSSEFloat();
+	// testBasicCosSSEDouble();
+	// testBasicCosSSEFloat();
+
+	// ==================================================
 
 
+	// ==================================================
+	// ================ exp_functions_t.h ===============
+	
+	// testBasicExpSSEDouble();
+	// testBasicExpSSEFloat();
 
+	// ==================================================
 
 
 
