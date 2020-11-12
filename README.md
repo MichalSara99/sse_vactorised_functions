@@ -3,6 +3,7 @@ Just a little library consisting of vectorised basic math functions written in A
 
 ## List
 * sin, cos (SPFP,DPFP)
+* exp_fast (SPFP,DPFP)
 * exp (SPFP,DPFP)
 
 ## Usage
