@@ -21,6 +21,8 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 	// ================ exp_functions_t.h ===============
 	
+	// testBasicFastExpSSEDouble();
+	// testBasicFastExpSSEFloat();
 	// testBasicExpSSEDouble();
 	// testBasicExpSSEFloat();
 

@@ -33,8 +33,9 @@
     <ClCompile Include="src\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="src\exp_functions_.asm" />
-    <MASM Include="src\trig_functions_.asm" />
+    <MASM Include="asm_x86\exp_fast_functions_.asm" />
+    <MASM Include="asm_x86\exp_functions_.asm" />
+    <MASM Include="asm_x86\trig_functions_.asm" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

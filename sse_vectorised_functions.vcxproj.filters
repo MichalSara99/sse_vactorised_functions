@@ -10,6 +10,9 @@
     <Filter Include="headers">
       <UniqueIdentifier>{19acce36-1923-416a-bada-e1dbb61b3cf1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="asm_x86">
+      <UniqueIdentifier>{9b9cc9f5-1ece-4ef6-a990-d4edd3e10823}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\math_constants.h">
@@ -46,11 +49,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="src\trig_functions_.asm">
-      <Filter>src</Filter>
+    <MASM Include="asm_x86\exp_fast_functions_.asm">
+      <Filter>asm_x86</Filter>
     </MASM>
-    <MASM Include="src\exp_functions_.asm">
-      <Filter>src</Filter>
+    <MASM Include="asm_x86\exp_functions_.asm">
+      <Filter>asm_x86</Filter>
+    </MASM>
+    <MASM Include="asm_x86\trig_functions_.asm">
+      <Filter>asm_x86</Filter>
     </MASM>
   </ItemGroup>
 </Project>
