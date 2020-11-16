@@ -5,6 +5,7 @@ Just a little library consisting of vectorised basic math functions written in A
 * sin, cos (SPFP,DPFP)
 * exp_fast (SPFP,DPFP)
 * exp (SPFP,DPFP)
+* natural log (SPFP)
 
 ## Usage
 Just started.
