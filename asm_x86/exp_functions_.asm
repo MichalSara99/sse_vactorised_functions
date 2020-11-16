@@ -157,6 +157,8 @@ exp_sse_ps					proc
 							mov ebp,esp
 							push ebx
 
+							xor eax,eax
+
 							mov ecx,[ebp + 12]
 							cmp ecx,4
 							jl Done
@@ -215,6 +217,8 @@ exp_sse_ps					proc
 							add edx,16
 							sub ecx,4
 							jnz @B
+
+							mov eax,1
 
 				Done:		pop ebx
 							mov esp,ebp

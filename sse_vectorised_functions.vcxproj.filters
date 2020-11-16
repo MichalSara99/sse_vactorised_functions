@@ -39,6 +39,12 @@
     <ClInclude Include="headers\sse_utilities.h">
       <Filter>headers</Filter>
     </ClInclude>
+    <ClInclude Include="headers\log_functions.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="unit_tests\log_functions_t.h">
+      <Filter>unit_tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -56,6 +62,9 @@
       <Filter>asm_x86</Filter>
     </MASM>
     <MASM Include="asm_x86\trig_functions_.asm">
+      <Filter>asm_x86</Filter>
+    </MASM>
+    <MASM Include="asm_x86\log_functions_.asm">
       <Filter>asm_x86</Filter>
     </MASM>
   </ItemGroup>

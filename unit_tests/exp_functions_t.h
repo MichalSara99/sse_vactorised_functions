@@ -84,9 +84,9 @@ void testBasicExpSSEFloat() {
 	int const n = 16;
 	std::size_t const align = 16;
 
-	double* x = aligned_alloc<double>(n, align);
-	double* res1 = aligned_alloc<double>(n, align);
-	double* res2 = aligned_alloc<double>(n, align);
+	float* x = aligned_alloc<float>(n, align);
+	float* res1 = aligned_alloc<float>(n, align);
+	float* res2 = aligned_alloc<float>(n, align);
 
 	// test some basic known values:
 
@@ -201,9 +201,9 @@ void testBasicFastExpSSEFloat() {
 	int const n = 16;
 	std::size_t const align = 16;
 
-	double* x = aligned_alloc<double>(n, align);
-	double* res1 = aligned_alloc<double>(n, align);
-	double* res2 = aligned_alloc<double>(n, align);
+	float* x = aligned_alloc<float>(n, align);
+	float* res1 = aligned_alloc<float>(n, align);
+	float* res2 = aligned_alloc<float>(n, align);
 
 	// test some basic known values:
 

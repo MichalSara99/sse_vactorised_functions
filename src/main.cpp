@@ -4,6 +4,7 @@
 
 #include"unit_tests/trig_functions_t.h"
 #include"unit_tests/exp_functions_t.h"
+#include"unit_tests/log_functions_t.h"
 
 int main(int argc, char const* argv[]) {
 
@@ -28,7 +29,12 @@ int main(int argc, char const* argv[]) {
 
 	// ==================================================
 
+	// ==================================================
+	// ================ log_functions_t.h ===============
 
+	// testBasicLogSSEFloat();
+
+	// ==================================================
 
 
 
