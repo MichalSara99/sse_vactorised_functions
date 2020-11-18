@@ -9,9 +9,9 @@
 #include<random>
 
 #include"headers/sse_utilities.h"
-#include"headers/math_constants.h"
-#include"headers/log_functions.h"
 #include"headers/sse_macros.h"
+#include"headers/sse_math_x86.h"
+
 
 using math_constants::pi;
 using packed_sse::log_sse_packed;

@@ -45,6 +45,9 @@
     <ClInclude Include="unit_tests\log_functions_t.h">
       <Filter>unit_tests</Filter>
     </ClInclude>
+    <ClInclude Include="headers\sse_math_x86.h">
+      <Filter>headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">

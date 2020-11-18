@@ -23,6 +23,7 @@
     <ClInclude Include="headers\log_functions.h" />
     <ClInclude Include="headers\math_constants.h" />
     <ClInclude Include="headers\sse_macros.h" />
+    <ClInclude Include="headers\sse_math_x86.h" />
     <ClInclude Include="headers\stdafx.h" />
     <ClInclude Include="headers\trig_functions.h" />
     <ClInclude Include="headers\sse_utilities.h" />

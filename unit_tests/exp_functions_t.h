@@ -9,8 +9,7 @@
 #include<random>
 
 #include"headers/sse_utilities.h"
-#include"headers/math_constants.h"
-#include"headers/exp_functions.h"
+#include"headers/sse_math_x86.h"
 #include"headers/sse_macros.h"
 
 using math_constants::pi;
