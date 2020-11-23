@@ -52,7 +52,8 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 	// ================ normal_dist_functions_t.h ===============
 
-	testBasicNormCDFSSEFloat();
+	 testBasicNormCDFSSEFloat();
+	testBasicNormCDFSSEDouble();
 
 	// ==================================================
 

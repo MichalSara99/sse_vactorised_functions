@@ -22,13 +22,83 @@ float norm_cdf(float x) {
 	if (x <= 0.0f)
 		ind = 1.0f;
 	x = std::abs(x);
-	float cst = 1.0f / (std::sqrt(2.0f * pi));
-	float first = std::exp(-0.5f * x * x);
-	float second = 0.226f + 0.64f * x + 0.33f * std::sqrt(x * x + 3.0f);
-	float res = 1.0f - ((first / second) * cst);
+	float const cst = 1.0f / (std::sqrt(2.0f * pi));
+	float const first = std::exp(-0.5f * x * x);
+	float const second = 0.226f + 0.64f * x + 0.33f * std::sqrt(x * x + 3.0f);
+	float const res = 1.0f - ((first / second) * cst);
 	return std::abs(ind - res);
 }
 
+double norm_cdf(double x) {
+	double ind = 0.0;
+	if (x <= 0.0)
+		ind = 1.0;
+	x = std::abs(x);
+	double const cst = 1.0 / (std::sqrt(2.0 * pi));
+	double const first = std::exp(-0.5 * x * x);
+	double const second = 0.226 + 0.64 * x + 0.33 * std::sqrt(x * x + 3.0);
+	double const res = 1.0 - ((first / second) * cst);
+	return std::abs(ind - res);
+}
+
+
+void testBasicNormCDFSSEDouble() {
+
+	int const n = 16;
+	std::size_t const align = 16;
+
+	double* x = aligned_alloc<double>(n, align);
+	double* res1 = aligned_alloc<double>(n, align);
+	double* res2 = aligned_alloc<double>(n, align);
+
+	// test some basic known values:
+
+	x[0] = 0.0;
+	x[1] = pi / 2.0;
+	x[2] = pi;
+	x[3] = 3.0 * pi / 2.0;
+	x[4] = 5.0* pi / 4.0;
+	x[5] = 2.0 * pi;
+	x[6] = 4.0 * pi;
+	x[7] = 3.0 * pi;
+	x[8] = 6.0 * pi / 3.0;
+	x[9] = -2.0 * pi;
+	x[10] = -pi / 4.0;
+	x[11] = 7.0 * pi / 4.0;
+	x[12] = 0.5;
+	x[13] = pi / 3.0;
+	x[14] = 3.5;
+	x[15] = 4.0 * pi / 3.0;
+
+	auto start_asm = std::chrono::system_clock::now();
+	bool rc1 = norm_cdf_sse_packed(x, n, res1);
+	auto end_asm = std::chrono::system_clock::now();
+	auto elapsed_asm = std::chrono::duration<double>(end_asm - start_asm).count();
+
+	auto start_cpp = std::chrono::system_clock::now();
+	for (int i = 0; i < n; ++i) {
+		res2[i] = norm_cdf(x[i]);
+	}
+	auto end_cpp = std::chrono::system_clock::now();
+	auto elapsed_cpp = std::chrono::duration<double>(end_cpp - start_cpp).count();
+
+	SSE_ASSERT(rc1 == 1, "Failure in packed norm CDF SSE occured");
+
+	std::cout << "		C++				Assembly (SSE)			Difference\n";
+	std::cout << "=========================================================\n\n";
+	for (int i = 0; i < n; ++i) {
+		std::cout << i << " | " << res2[i];
+		std::cout << " | " << res1[i];
+		std::cout << " | " << (res1[i] - res2[i]) << "\n";
+	}
+	std::cout << "=========================================================\n\n";
+	std::cout << "\n" << "Elapsed (C++): " << elapsed_cpp;
+	std::cout << "\n" << "Elapsed (Assembly): " << elapsed_asm << "\n";
+
+	aligned_free(x);
+	aligned_free(res1);
+	aligned_free(res2);
+}
 
 void testBasicNormCDFSSEFloat() {
 
