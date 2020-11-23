@@ -7,7 +7,7 @@ Just a little library consisting of vectorised basic math functions written in A
 * exp (SPFP,DPFP)
 * natural log (SPFP,DPFP)
 * mul, abs (SPFP,DPFP)
-* normal CDF (SPFP)
+* normal CDF (SPFP,DPFP)
 
 ## Usage
 Just started.
