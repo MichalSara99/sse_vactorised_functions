@@ -54,6 +54,7 @@ int main(int argc, char const* argv[]) {
 
 	 testBasicNormCDFSSEFloat();
 	testBasicNormCDFSSEDouble();
+	testBasicNormInvCDFSSEFloat();
 
 	// ==================================================
 

@@ -13,6 +13,7 @@
 
 using math_constants::pi;
 using packed_sse::norm_cdf_sse_packed;
+using packed_sse::norm_inv_cdf_sse_packed;
 using sse_utilities::aligned_alloc;
 using sse_utilities::aligned_free;
 
@@ -158,7 +159,82 @@ void testBasicNormCDFSSEFloat() {
 	aligned_free(res2);
 }
 
+float rationalApproxIncCDF(float x) {
+	float const c[3] = { 2.515517f, 0.802853f, 0.010328f };
+	float const	d[3] = { 1.432788f, 0.189269f, 0.001308f };
+	return (x - ((c[2] * x + c[1]) * x + c[0]) / (((d[2] * x + d[1]) * x + d[0]) * x + 1.0f));
+}
 
+float inv_cdf(float p) {
+	int ind = 0;
+	int inv = -1;
+	if (p >= 0.5f) {
+		ind = 1;
+		inv = 1;
+	}
+	p = abs(ind - p);
+	float const x = std::sqrt(-2.0f * std::log(p));
+	return (inv * rationalApproxIncCDF(x));
+}
+
+
+void testBasicNormInvCDFSSEFloat() {
+
+	int const n = 16;
+	std::size_t const align = 16;
+
+	float* x = aligned_alloc<float>(n, align);
+	float* res1 = aligned_alloc<float>(n, align);
+	float* res2 = aligned_alloc<float>(n, align);
+
+	// test some basic known values:
+
+	x[0] = 0.0000001f;
+	x[1] = 0.00001f;
+	x[2] = 0.001f;
+	x[3] = 0.05f;
+	x[4] = 0.15f;
+	x[5] = 0.25f;
+	x[6] = 0.35f;
+	x[7] = 0.45f;
+	x[8] = 0.55f;
+	x[9] = 0.65f;
+	x[10] = 0.75f;
+	x[11] = 0.85f;
+	x[12] = 0.95f;
+	x[13] = 0.999f;
+	x[14] = 0.99999f;
+	x[15] = 0.9999999f;
+
+	auto start_asm = std::chrono::system_clock::now();
+	bool rc1 = norm_inv_cdf_sse_packed(x, n, res1);
+	auto end_asm = std::chrono::system_clock::now();
+	auto elapsed_asm = std::chrono::duration<double>(end_asm - start_asm).count();
+
+	auto start_cpp = std::chrono::system_clock::now();
+	for (int i = 0; i < n; ++i) {
+		res2[i] = inv_cdf(x[i]);
+	}
+	auto end_cpp = std::chrono::system_clock::now();
+	auto elapsed_cpp = std::chrono::duration<double>(end_cpp - start_cpp).count();
+
+	SSE_ASSERT(rc1 == 1, "Failure in packed norm INV CDF SSE occured");
+
+	std::cout << "		C++				Assembly (SSE)			Difference\n";
+	std::cout << "=========================================================\n\n";
+	for (int i = 0; i < n; ++i) {
+		std::cout << i << " | " << res2[i];
+		std::cout << " | " << res1[i];
+		std::cout << " | " << (res1[i] - res2[i]) << "\n";
+	}
+	std::cout << "=========================================================\n\n";
+	std::cout << "\n" << "Elapsed (C++): " << elapsed_cpp;
+	std::cout << "\n" << "Elapsed (Assembly): " << elapsed_asm << "\n";
+
+	aligned_free(x);
+	aligned_free(res1);
+	aligned_free(res2);
+}
 
 
 
