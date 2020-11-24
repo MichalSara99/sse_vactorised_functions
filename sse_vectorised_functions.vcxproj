@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\basic_functions.h" />
+    <ClInclude Include="headers\basic_operations.h" />
     <ClInclude Include="headers\exp_functions.h" />
     <ClInclude Include="headers\log_functions.h" />
     <ClInclude Include="headers\math_constants.h" />
@@ -30,6 +31,7 @@
     <ClInclude Include="headers\trig_functions.h" />
     <ClInclude Include="headers\sse_utilities.h" />
     <ClInclude Include="unit_tests\basic_functions_t.h" />
+    <ClInclude Include="unit_tests\basic_operations_t.h" />
     <ClInclude Include="unit_tests\exp_functions_t.h" />
     <ClInclude Include="unit_tests\log_functions_t.h" />
     <ClInclude Include="unit_tests\normal_dist_functions_t.h" />
@@ -41,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <MASM Include="asm_x86\basic_functions_.asm" />
+    <MASM Include="asm_x86\basic_operations_.asm" />
     <MASM Include="asm_x86\exp_fast_functions_.asm" />
     <MASM Include="asm_x86\exp_functions_.asm" />
     <MASM Include="asm_x86\log_functions_.asm" />

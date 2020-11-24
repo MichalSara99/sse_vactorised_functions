@@ -3,6 +3,7 @@
 #define _SSE_MATH_X86
 
 #include"math_constants.h"
+#include"basic_operations.h"
 #include"basic_functions.h"
 #include"exp_functions.h"
 #include"log_functions.h"

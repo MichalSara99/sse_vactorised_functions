@@ -5,6 +5,7 @@
 #include"unit_tests/trig_functions_t.h"
 #include"unit_tests/exp_functions_t.h"
 #include"unit_tests/log_functions_t.h"
+#include"unit_tests/basic_operations_t.h"
 #include"unit_tests/basic_functions_t.h"
 #include"unit_tests/normal_dist_functions_t.h"
 
@@ -42,19 +43,29 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 	// ================ basic_functions_t.h ===============
 
-	// testBasicAbsSSEDouble();
 	// testBasicAbsSSEFloat();
+	// testBasicAbsSSEDouble();
+
+	// ==================================================
+
+	// ==================================================
+	// ================ basic_operations_t.h ===============
+
+	// testBasicSubSSEDouble();
+	// testBasicSubSSEFloat();
+	// testBasicAddSSEDouble();
+	// testBasicAddSSEFloat();
 	// testBasicMulSSEFloat();
 	// testBasicMulSSEDouble();
 
-		// ==================================================
+	// ==================================================
 
 	// ==================================================
 	// ================ normal_dist_functions_t.h ===============
 
-	 testBasicNormCDFSSEFloat();
-	testBasicNormCDFSSEDouble();
-	testBasicNormInvCDFSSEFloat();
+	// testBasicNormCDFSSEFloat();
+	// testBasicNormCDFSSEDouble();
+	// testBasicNormInvCDFSSEFloat();
 
 	// ==================================================
 
