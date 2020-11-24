@@ -8,6 +8,7 @@ Just a little library consisting of vectorised basic math functions written in A
 * natural log (SPFP,DPFP)
 * mul, abs (SPFP,DPFP)
 * normal CDF (SPFP,DPFP)
+* normal inverse CDF (SPFP)
 
 ## Usage
 Just started.
