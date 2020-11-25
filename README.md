@@ -6,8 +6,8 @@ Just a little library consisting of vectorised basic math functions written in A
 * exp_fast (SPFP,DPFP)
 * exp (SPFP,DPFP)
 * natural log (SPFP,DPFP)
-* add,sub,mul,div (SPFP,DPFP)
-* abs (SPFP,DPFP)
+* add,sub,mul,div,neg,inv (SPFP,DPFP)
+* abs,sqrt (SPFP,DPFP)
 * normal CDF (SPFP,DPFP)
 * normal inverse CDF (SPFP)
 
