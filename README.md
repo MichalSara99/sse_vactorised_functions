@@ -13,7 +13,5 @@ Just a little library consisting of vectorised basic math functions written in A
 * normal inverse CDF (SPFP)
 
 ## Usage
-Just started.
-To see how to use this library see header files ending with _t.
-I will soon describe in detail how to use this library.
+Include header file sse_math_x86.h into your project using x86 architecture 
 
