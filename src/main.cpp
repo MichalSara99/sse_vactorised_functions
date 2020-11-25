@@ -45,12 +45,19 @@ int main(int argc, char const* argv[]) {
 
 	// testBasicAbsSSEFloat();
 	// testBasicAbsSSEDouble();
+	// testBasicSqrtSSEDouble();
+	// testBasicSqrtSSEFloat();
 
 	// ==================================================
 
 	// ==================================================
 	// ================ basic_operations_t.h ===============
 
+
+	// testBasicInvSSEFloat();
+	// testBasicInvSSEDouble();
+	// testBasicNegSSEFloat();
+	// testBasicNegSSEDouble();
 	// testBasicSubSSEDouble();
 	// testBasicSubSSEFloat();
 	// testBasicAddSSEDouble();

@@ -21,7 +21,14 @@ namespace __packed_sse_ {
 	extern "C" bool sub_sse_pd(double const* x_aligned_16, double const* y_aligned_16, int n2, double* out_aligned_16);
 	// packed single-precision floating-point subtraction
 	extern "C" bool sub_sse_ps(float const* x_aligned_16, float const* y_aligned_16, int n4, float* out_aligned_16);
-
+	// packed double-precision floating-point negative value
+	extern "C" bool neg_sse_pd(double const* in_aligned_16, int n2, double* out_aligned_16);
+	// packed single-precision floating-point negative value
+	extern "C" bool neg_sse_ps(float const* in_aligned_16, int n2, float* out_aligned_16);
+	// packed double-precision floating-point inverse(=inverted) value 
+	extern "C" bool inv_sse_pd(double const* in_aligned_16, int n2, double* out_aligned_16);
+	// packed single-precision floating-point inverse(=inverted) value 
+	extern "C" bool inv_sse_ps(float const* in_aligned_16, int n2, float* out_aligned_16);
 }
 
 
@@ -63,7 +70,23 @@ namespace packed_sse {
 		return __packed_sse_::sub_sse_ps(x_aligned_16, y_aligned_16, size4, out_aligned_16);
 	}
 
+	// packed double-precision floating-point negative value
+	bool neg_sse_packed(double const* in_aligned_16, int size2, double* out_aligned_16) {
+		return __packed_sse_::neg_sse_pd(in_aligned_16, size2, out_aligned_16);
+	}
+	// packed single-precision floating-point negative value
+	bool neg_sse_packed(float const* in_aligned_16, int size2, float* out_aligned_16) {
+		return __packed_sse_::neg_sse_ps(in_aligned_16, size2, out_aligned_16);
+	}
 
+	// packed double-precision floating-point inverse value
+	bool inv_sse_packed(double const* in_aligned_16, int size2, double* out_aligned_16) {
+		return __packed_sse_::inv_sse_pd(in_aligned_16, size2, out_aligned_16);
+	}
+	// packed single-precision floating-point inverse value
+	bool inv_sse_packed(float const* in_aligned_16, int size2, float* out_aligned_16) {
+		return __packed_sse_::inv_sse_ps(in_aligned_16, size2, out_aligned_16);
+	}
 
 }
 
