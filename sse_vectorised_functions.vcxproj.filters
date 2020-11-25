@@ -66,6 +66,12 @@
     <ClInclude Include="unit_tests\basic_functions_t.h">
       <Filter>unit_tests</Filter>
     </ClInclude>
+    <ClInclude Include="headers\special_functions.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="unit_tests\special_functions_t.h">
+      <Filter>unit_tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -95,6 +101,9 @@
       <Filter>asm_x86</Filter>
     </MASM>
     <MASM Include="asm_x86\basic_operations_.asm">
+      <Filter>asm_x86</Filter>
+    </MASM>
+    <MASM Include="asm_x86\special_functions_.asm">
       <Filter>asm_x86</Filter>
     </MASM>
   </ItemGroup>

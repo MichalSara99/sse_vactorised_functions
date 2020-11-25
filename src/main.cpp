@@ -7,6 +7,7 @@
 #include"unit_tests/log_functions_t.h"
 #include"unit_tests/basic_operations_t.h"
 #include"unit_tests/basic_functions_t.h"
+#include"unit_tests/special_functions_t.h"
 #include"unit_tests/normal_dist_functions_t.h"
 
 int main(int argc, char const* argv[]) {
@@ -41,7 +42,7 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 
 	// ==================================================
-	// ================ basic_functions_t.h ===============
+	// ================ basic_functions_t.h =============
 
 	// testBasicAbsSSEFloat();
 	// testBasicAbsSSEDouble();
@@ -51,7 +52,7 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 
 	// ==================================================
-	// ================ basic_operations_t.h ===============
+	// ================ basic_operations_t.h ============
 
 
 	// testBasicInvSSEFloat();
@@ -66,9 +67,19 @@ int main(int argc, char const* argv[]) {
 	// testBasicMulSSEDouble();
 
 	// ==================================================
+	// ==================================================
+
+	// ================ special_functions_t.h ===========
+
+	// testErfSSEDouble();
+	// testErfSSEFloat();
+	// testErfcSSEDouble();
+	// testErfcSSEFloat();
 
 	// ==================================================
-	// ================ normal_dist_functions_t.h ===============
+
+	// ==================================================
+	// ================ normal_dist_functions_t.h =======
 
 	// testBasicNormCDFSSEFloat();
 	// testBasicNormCDFSSEDouble();
