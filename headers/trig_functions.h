@@ -17,7 +17,7 @@ namespace __packed_sse_ {
 }
 
 
-namespace packed_sse {
+namespace sse_math {
 
 	// packed double-precision floating-point cosine
 	bool cos_sse_packed(double const* in_aligned_16, int size2, double* out_aligned_16) {

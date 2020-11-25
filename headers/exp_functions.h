@@ -19,7 +19,7 @@ namespace __packed_sse_ {
 
 }
 
-namespace packed_sse {
+namespace sse_math {
 
 	// packed fast double-precision floating-point exp
 	bool exp_fast_sse_packed(double const* in_aligned_16, int size2, double* out_aligned_16) {

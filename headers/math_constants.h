@@ -3,7 +3,7 @@
 #define _MATH_CONSTANTS
 
 
-namespace math_constants {
+namespace sse_constants {
 
 	const static double pi = 3.1415926535897932384626433;
 

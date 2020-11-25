@@ -13,8 +13,8 @@
 #include"headers/sse_math_x86.h"
 
 
-using math_constants::pi;
-using packed_sse::log_sse_packed;
+using sse_constants::pi;
+using sse_math::log_sse_packed;
 using sse_utilities::aligned_alloc;
 using sse_utilities::aligned_free;
 

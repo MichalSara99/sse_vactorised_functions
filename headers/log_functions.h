@@ -13,7 +13,7 @@ namespace __packed_sse_ {
 
 }
 
-namespace packed_sse {
+namespace sse_math {
 
 	// packed fast single-precision floating-point natural log
 	bool log_sse_packed(float const* in_aligned_16, int size4, float* out_aligned_16) {

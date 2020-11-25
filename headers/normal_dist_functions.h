@@ -22,7 +22,7 @@ namespace __packed_sse_ {
 
 
 
-namespace packed_sse {
+namespace sse_math {
 
 	// packed single-precision floating-point normal CDF
 	bool norm_cdf_sse_packed(float const* in_aligned_16, int size2, float* out_aligned_16) {

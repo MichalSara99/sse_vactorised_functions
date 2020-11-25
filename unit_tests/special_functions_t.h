@@ -11,9 +11,9 @@
 #include"headers/sse_math_x86.h"
 #include"headers/sse_macros.h"
 
-using math_constants::pi;
-using packed_sse::erf_sse_packed;
-using packed_sse::erfc_sse_packed;
+using sse_constants::pi;
+using sse_math::erf_sse_packed;
+using sse_math::erfc_sse_packed;
 using sse_utilities::aligned_alloc;
 using sse_utilities::aligned_free;
 

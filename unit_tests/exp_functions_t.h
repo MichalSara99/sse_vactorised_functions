@@ -12,9 +12,9 @@
 #include"headers/sse_math_x86.h"
 #include"headers/sse_macros.h"
 
-using math_constants::pi;
-using packed_sse::exp_fast_sse_packed;
-using packed_sse::exp_sse_packed;
+using sse_constants::pi;
+using sse_math::exp_fast_sse_packed;
+using sse_math::exp_sse_packed;
 using sse_utilities::aligned_alloc;
 using sse_utilities::aligned_free;
 

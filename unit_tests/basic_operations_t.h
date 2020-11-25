@@ -11,13 +11,13 @@
 #include"headers/sse_math_x86.h"
 #include"headers/sse_macros.h"
 
-using math_constants::pi;
-using packed_sse::add_sse_packed;
-using packed_sse::sub_sse_packed;
-using packed_sse::div_sse_packed;
-using packed_sse::mul_sse_packed;
-using packed_sse::neg_sse_packed;
-using packed_sse::inv_sse_packed;
+using sse_constants::pi;
+using sse_math::add_sse_packed;
+using sse_math::sub_sse_packed;
+using sse_math::div_sse_packed;
+using sse_math::mul_sse_packed;
+using sse_math::neg_sse_packed;
+using sse_math::inv_sse_packed;
 
 using sse_utilities::aligned_alloc;
 using sse_utilities::aligned_free;
