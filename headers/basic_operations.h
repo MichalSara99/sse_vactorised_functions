@@ -32,7 +32,7 @@ namespace __packed_sse_ {
 }
 
 
-namespace packed_sse {
+namespace sse_math {
 
 	// packed double-precision floating-point multiplication
 	bool mul_sse_packed(double const* x_aligned_16, double const* y_aligned_16, int size2, double* out_aligned_16) {
