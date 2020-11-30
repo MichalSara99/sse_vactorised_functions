@@ -1,19 +1,24 @@
 #include<iostream>
 #include<string>
 
+// EXTERNAL TESTS
+#include"external_tests/trig_functions_et.h"
+#include"external_tests/exp_functions_et.h"
+#include"external_tests/log_functions_et.h"
+#include"external_tests/basic_operations_et.h"
+#include"external_tests/basic_functions_et.h"
+#include"external_tests/special_functions_et.h"
+#include"external_tests/normal_dist_functions_et.h"
 
-#include"unit_tests/trig_functions_t.h"
-#include"unit_tests/exp_functions_t.h"
-#include"unit_tests/log_functions_t.h"
-#include"unit_tests/basic_operations_t.h"
-#include"unit_tests/basic_functions_t.h"
-#include"unit_tests/special_functions_t.h"
-#include"unit_tests/normal_dist_functions_t.h"
 
 int main(int argc, char const* argv[]) {
 
+	/// ==========================================================
+	/// =================== EXTERNAL TESTS =======================
+	/// ==========================================================
+
 	// ===================================================
-	// ================ trig_functions_t.h ===============
+	// ================ trig_functions_et.h ===============
 
 	// testBasicSinSSEDouble();
 	// testBasicSinSSEFloat();
@@ -24,7 +29,7 @@ int main(int argc, char const* argv[]) {
 
 
 	// ==================================================
-	// ================ exp_functions_t.h ===============
+	// ================ exp_functions_et.h ===============
 	
 	// testBasicFastExpSSEDouble();
 	// testBasicFastExpSSEFloat();
@@ -34,7 +39,7 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 
 	// ==================================================
-	// ================ log_functions_t.h ===============
+	// ================ log_functions_et.h ===============
 
 	// testBasicLogSSEFloat();
 	// testBasicLogSSEDouble();
@@ -42,7 +47,7 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 
 	// ==================================================
-	// ================ basic_functions_t.h =============
+	// ================ basic_functions_et.h =============
 
 	// testBasicAbsSSEFloat();
 	// testBasicAbsSSEDouble();
@@ -52,7 +57,7 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 
 	// ==================================================
-	// ================ basic_operations_t.h ============
+	// ================ basic_operations_et.h ============
 
 
 	// testBasicInvSSEFloat();
@@ -69,7 +74,7 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 	// ==================================================
 
-	// ================ special_functions_t.h ===========
+	// ================ special_functions_et.h ===========
 
 	// testErfSSEDouble();
 	// testErfSSEFloat();
@@ -79,9 +84,9 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 
 	// ==================================================
-	// ================ normal_dist_functions_t.h =======
+	// ================ normal_dist_functions_et.h =======
 
-	// testBasicNormCDFSSEFloat();
+	 testBasicNormCDFSSEFloat();
 	// testBasicNormCDFSSEDouble();
 	// testBasicNormInvCDFSSEFloat();
 

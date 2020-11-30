@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sse_vectorised_functions_lib", "..\sse_vectorised_functions_lib\sse_vectorised_functions_lib.vcxproj", "{123DB683-45B1-444C-AD36-98FC7C67B00F}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sse_vectorised_functions", "sse_vectorised_functions.vcxproj", "{EAA192E0-08D1-4F5D-8670-53D54B7C42B0}"
 EndProject
 Global
@@ -13,6 +15,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{123DB683-45B1-444C-AD36-98FC7C67B00F}.Debug|x64.ActiveCfg = Debug|x64
+		{123DB683-45B1-444C-AD36-98FC7C67B00F}.Debug|x64.Build.0 = Debug|x64
+		{123DB683-45B1-444C-AD36-98FC7C67B00F}.Debug|x86.ActiveCfg = Debug|Win32
+		{123DB683-45B1-444C-AD36-98FC7C67B00F}.Debug|x86.Build.0 = Debug|Win32
+		{123DB683-45B1-444C-AD36-98FC7C67B00F}.Release|x64.ActiveCfg = Release|x64
+		{123DB683-45B1-444C-AD36-98FC7C67B00F}.Release|x64.Build.0 = Release|x64
+		{123DB683-45B1-444C-AD36-98FC7C67B00F}.Release|x86.ActiveCfg = Release|Win32
+		{123DB683-45B1-444C-AD36-98FC7C67B00F}.Release|x86.Build.0 = Release|Win32
 		{EAA192E0-08D1-4F5D-8670-53D54B7C42B0}.Debug|x64.ActiveCfg = Debug|x64
 		{EAA192E0-08D1-4F5D-8670-53D54B7C42B0}.Debug|x64.Build.0 = Debug|x64
 		{EAA192E0-08D1-4F5D-8670-53D54B7C42B0}.Debug|x86.ActiveCfg = Debug|Win32

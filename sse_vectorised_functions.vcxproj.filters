@@ -1,110 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="unit_tests">
+    <Filter Include="external_tests">
       <UniqueIdentifier>{ecb10ca6-25a0-4e8a-bd34-21503922dd45}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src">
-      <UniqueIdentifier>{5d3f7430-46fa-45b1-a554-dd86b84aa068}</UniqueIdentifier>
+    <Filter Include="external_headers">
+      <UniqueIdentifier>{ef720c2f-bf77-4f60-a5a0-4e2f308044de}</UniqueIdentifier>
     </Filter>
-    <Filter Include="headers">
-      <UniqueIdentifier>{19acce36-1923-416a-bada-e1dbb61b3cf1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="asm_x86">
-      <UniqueIdentifier>{9b9cc9f5-1ece-4ef6-a990-d4edd3e10823}</UniqueIdentifier>
+    <Filter Include="external_src">
+      <UniqueIdentifier>{32b4e9c9-dd96-494a-ae39-b2552cea9d84}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\math_constants.h">
-      <Filter>headers</Filter>
+    <ClInclude Include="external_headers\sse_macros.h">
+      <Filter>external_headers</Filter>
     </ClInclude>
-    <ClInclude Include="headers\sse_macros.h">
-      <Filter>headers</Filter>
+    <ClInclude Include="external_tests\basic_functions_et.h">
+      <Filter>external_tests</Filter>
     </ClInclude>
-    <ClInclude Include="headers\stdafx.h">
-      <Filter>headers</Filter>
+    <ClInclude Include="external_tests\basic_operations_et.h">
+      <Filter>external_tests</Filter>
     </ClInclude>
-    <ClInclude Include="headers\trig_functions.h">
-      <Filter>headers</Filter>
+    <ClInclude Include="external_tests\exp_functions_et.h">
+      <Filter>external_tests</Filter>
     </ClInclude>
-    <ClInclude Include="unit_tests\trig_functions_t.h">
-      <Filter>unit_tests</Filter>
+    <ClInclude Include="external_tests\log_functions_et.h">
+      <Filter>external_tests</Filter>
     </ClInclude>
-    <ClInclude Include="headers\exp_functions.h">
-      <Filter>headers</Filter>
+    <ClInclude Include="external_tests\normal_dist_functions_et.h">
+      <Filter>external_tests</Filter>
     </ClInclude>
-    <ClInclude Include="unit_tests\exp_functions_t.h">
-      <Filter>unit_tests</Filter>
+    <ClInclude Include="external_tests\special_functions_et.h">
+      <Filter>external_tests</Filter>
     </ClInclude>
-    <ClInclude Include="headers\sse_utilities.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="headers\log_functions.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="unit_tests\log_functions_t.h">
-      <Filter>unit_tests</Filter>
-    </ClInclude>
-    <ClInclude Include="headers\sse_math_x86.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="headers\normal_dist_functions.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="unit_tests\normal_dist_functions_t.h">
-      <Filter>unit_tests</Filter>
-    </ClInclude>
-    <ClInclude Include="headers\basic_functions.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="headers\basic_operations.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="unit_tests\basic_operations_t.h">
-      <Filter>unit_tests</Filter>
-    </ClInclude>
-    <ClInclude Include="unit_tests\basic_functions_t.h">
-      <Filter>unit_tests</Filter>
-    </ClInclude>
-    <ClInclude Include="headers\special_functions.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="unit_tests\special_functions_t.h">
-      <Filter>unit_tests</Filter>
+    <ClInclude Include="external_tests\trig_functions_et.h">
+      <Filter>external_tests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="external_src\main.cpp">
+      <Filter>external_src</Filter>
     </ClCompile>
-    <ClCompile Include="src\stdafx.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <MASM Include="asm_x86\exp_fast_functions_.asm">
-      <Filter>asm_x86</Filter>
-    </MASM>
-    <MASM Include="asm_x86\exp_functions_.asm">
-      <Filter>asm_x86</Filter>
-    </MASM>
-    <MASM Include="asm_x86\trig_functions_.asm">
-      <Filter>asm_x86</Filter>
-    </MASM>
-    <MASM Include="asm_x86\log_functions_.asm">
-      <Filter>asm_x86</Filter>
-    </MASM>
-    <MASM Include="asm_x86\normal_dist_functions_.asm">
-      <Filter>asm_x86</Filter>
-    </MASM>
-    <MASM Include="asm_x86\basic_functions_.asm">
-      <Filter>asm_x86</Filter>
-    </MASM>
-    <MASM Include="asm_x86\basic_operations_.asm">
-      <Filter>asm_x86</Filter>
-    </MASM>
-    <MASM Include="asm_x86\special_functions_.asm">
-      <Filter>asm_x86</Filter>
-    </MASM>
   </ItemGroup>
 </Project>
