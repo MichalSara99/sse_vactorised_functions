@@ -95,9 +95,24 @@ D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\n
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(120,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(122,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(124,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(157,25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(157,18): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(239,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(240,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(241,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(242,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(243,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(244,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(245,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(246,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(247,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(248,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(249,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(251,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(253,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Generating code
-  1 of 30 functions ( 3.3%) were compiled, the rest were copied from previous compilation.
+  10 of 31 functions (32.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    4 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   sse_vectorised_functions.vcxproj -> D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\Release\sse_vectorised_functions.exe

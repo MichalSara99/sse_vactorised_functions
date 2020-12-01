@@ -86,7 +86,9 @@ int main(int argc, char const* argv[]) {
 	// ==================================================
 	// ================ normal_dist_functions_et.h =======
 
-	 testBasicNormCDFSSEFloat();
+	// testBasicNormPDFSSEFloat();
+	// testBasicNormPDFSSEDouble();
+	// testBasicNormCDFSSEFloat();
 	// testBasicNormCDFSSEDouble();
 	// testBasicNormInvCDFSSEFloat();
 
