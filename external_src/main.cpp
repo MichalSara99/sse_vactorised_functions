@@ -53,6 +53,14 @@ int main(int argc, char const* argv[]) {
 	// testBasicAbsSSEDouble();
 	// testBasicSqrtSSEDouble();
 	// testBasicSqrtSSEFloat();
+	// testBasicMinSSEFloat();
+	// testBasicMinSSEDouble();
+	// testBasicMaxSSEFloat();
+	// testBasicMaxSSEDouble();
+	// testBasicMinsSSEFloat();
+	// testBasicMinsSSEDouble();
+	// testBasicMaxsSSEFloat();
+	// testBasicMaxsSSEDouble();
 
 	// ==================================================
 
