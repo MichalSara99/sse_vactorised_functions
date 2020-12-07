@@ -24,6 +24,8 @@ int main(int argc, char const* argv[]) {
 	// testBasicSinSSEFloat();
 	// testBasicCosSSEDouble();
 	// testBasicCosSSEFloat();
+	// testBasicTanSSEFloat();
+	// testBasicCotSSEFloat();
 
 	// ==================================================
 
