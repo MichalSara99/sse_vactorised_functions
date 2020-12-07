@@ -185,6 +185,19 @@ D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\b
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(624,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(626,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(628,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(848,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(849,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(850,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(851,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(852,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(853,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(854,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(855,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(856,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(857,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(858,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(860,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\basic_functions_et.h(862,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(20,25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(20,18): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(110,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
@@ -216,7 +229,7 @@ D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\n
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(251,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\external_tests\normal_dist_functions_et.h(253,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Generating code
-  2 of 25 functions ( 8.0%) were compiled, the rest were copied from previous compilation.
+  4 of 25 functions (16.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

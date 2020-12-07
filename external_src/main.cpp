@@ -63,6 +63,8 @@ int main(int argc, char const* argv[]) {
 	// testBasicMinsSSEDouble();
 	// testBasicMaxsSSEFloat();
 	// testBasicMaxsSSEDouble();
+	// testBasicSqrpowSSEDouble();
+	// testBasicSqrpowSSEFloat();
 
 	// ==================================================
 
