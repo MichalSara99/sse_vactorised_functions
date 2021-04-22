@@ -341,7 +341,7 @@ void testBasicMinsSSEDouble()
 void testBasicSqrtSSEDouble()
 {
 
-    int const n = 16;
+    int const n = 16 - 1;
     std::size_t const align = 16;
 
     double *x = sse_utility::aligned_alloc<double>(n, align);
@@ -350,7 +350,7 @@ void testBasicSqrtSSEDouble()
 
     // test some basic known values:
 
-    x[0] = 0.0;
+    x[0] = 0.05;
     x[1] = pi() / 2.0;
     x[2] = pi();
     x[3] = 3.0 * pi() / 2.0;
@@ -404,7 +404,7 @@ void testBasicSqrtSSEDouble()
 void testBasicSqrtSSEFloat()
 {
 
-    int const n = 16;
+    int const n = 16 + 1;
     std::size_t const align = 16;
 
     float *x = sse_utility::aligned_alloc<float>(n, align);
@@ -413,7 +413,7 @@ void testBasicSqrtSSEFloat()
 
     // test some basic known values:
 
-    x[0] = 0.0;
+    x[0] = 0.05;
     x[1] = pi() / 2.0;
     x[2] = pi();
     x[3] = 3.0 * pi() / 2.0;
@@ -429,6 +429,7 @@ void testBasicSqrtSSEFloat()
     x[13] = pi() / 3.0;
     x[14] = 23.5;
     x[15] = 4.0 * pi() / 3.0;
+    x[16] = 25.0;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = sqrt_sse(x, n, res1);
@@ -476,8 +477,8 @@ void testBasicAbsSSEDouble()
 
     // test some basic known values:
 
-    x[0] = 0.0;
-    x[1] = pi() / 2.0;
+    x[0] = -10.0;
+    x[1] = -pi() / 2.0;
     x[2] = pi();
     x[3] = 3.0 * pi() / 2.0;
     x[4] = 5.0 * pi() / 4.0;
@@ -594,7 +595,7 @@ void testBasicAbsSSEFloat()
 void testBasicSqrpowSSEDouble()
 {
 
-    int const n = 16;
+    int const n = 16 + 1;
     std::size_t const align = 16;
 
     double *x = sse_utility::aligned_alloc<double>(n, align);
@@ -603,7 +604,7 @@ void testBasicSqrpowSSEDouble()
 
     // test some basic known values:
 
-    x[0] = 0.0;
+    x[0] = -0.05;
     x[1] = pi() / 2.0;
     x[2] = pi();
     x[3] = 3.0 * pi() / 2.0;
@@ -619,6 +620,7 @@ void testBasicSqrpowSSEDouble()
     x[13] = pi() / 3.0;
     x[14] = 23.5;
     x[15] = 4.0 * pi() / 3.0;
+    x[16] = 100.2;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = sqrpow_sse(x, n, res1);
@@ -628,7 +630,7 @@ void testBasicSqrpowSSEDouble()
     auto start_cpp = std::chrono::system_clock::now();
     for (int i = 0; i < n; ++i)
     {
-        res2[i] = pow(x[i], 2);
+        res2[i] = x[i] * x[i];
     }
     auto end_cpp = std::chrono::system_clock::now();
     auto elapsed_cpp = std::chrono::duration<double>(end_cpp - start_cpp).count();
@@ -657,7 +659,7 @@ void testBasicSqrpowSSEDouble()
 void testBasicSqrpowSSEFloat()
 {
 
-    int const n = 16;
+    int const n = 16 + 1;
     std::size_t const align = 16;
 
     float *x = sse_utility::aligned_alloc<float>(n, align);
@@ -682,6 +684,7 @@ void testBasicSqrpowSSEFloat()
     x[13] = pi() / 3.0;
     x[14] = 23.5;
     x[15] = 4.0 * pi() / 3.0;
+    x[16] = 4.0;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = sqrpow_sse(x, n, res1);
@@ -691,7 +694,7 @@ void testBasicSqrpowSSEFloat()
     auto start_cpp = std::chrono::system_clock::now();
     for (int i = 0; i < n; ++i)
     {
-        res2[i] = pow(x[i], 2);
+        res2[i] = x[i] * x[i];
     }
     auto end_cpp = std::chrono::system_clock::now();
     auto elapsed_cpp = std::chrono::duration<double>(end_cpp - start_cpp).count();

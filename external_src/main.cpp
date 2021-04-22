@@ -51,7 +51,7 @@ int main(int argc, char const *argv[])
     // ================ basic_functions_et.h =============
 
     // testBasicAbsSSEFloat();
-    testBasicAbsSSEDouble();
+    // testBasicAbsSSEDouble();
     // testBasicSqrtSSEDouble();
     // testBasicSqrtSSEFloat();
     // testBasicMinsSSEFloat();
@@ -97,6 +97,7 @@ int main(int argc, char const *argv[])
     // testBasicNormCDFSSEFloat();
     // testBasicNormCDFSSEDouble();
     // testBasicNormInvCDFSSEFloat();
+    // testBasicNormInvCDFSSEDouble();
 
     // ==================================================
 
