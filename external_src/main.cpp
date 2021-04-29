@@ -10,8 +10,42 @@
 #include "external_tests/special_functions_et.h"
 #include "external_tests/trig_functions_et.h"
 
+// INTERNAl TESTS:
+#include "internal_tests/semd_functions_t.h"
+#include "internal_tests/semd_operations_t.h"
+#include "internal_tests/semd_t.h"
+
 int main(int argc, char const *argv[])
 {
+
+    /// ==========================================================
+    /// =================== INTERNAL TESTS =======================
+    /// ==========================================================
+
+    // ===================================================
+    // ====================== semd_t.h ===================
+
+    // testSemdFromList();
+    // testSemdFromVector();
+    // testSemdFromConstVal();
+    // testSemdFromSize();
+    // testSemdFromCopy();
+    // testSemdFromMove();
+    // testSemdCopyAssign();
+    // testSemdMoveAssign();
+
+    // ===================================================
+    // ================== semd_operations.h ==============
+    // testSemdOperationsAdd<double>();
+    // testSemdOperationsSub<double>();
+
+    // ===================================================
+    // ================== semd_functions.h ==============
+    // testSemdSin<double>();
+    // testSemdCos<double>();
+    // testSemdExpFast<double>();
+    // testSemdExp<double>();
+    // testSemdLog<double>();
 
     /// ==========================================================
     /// =================== EXTERNAL TESTS =======================

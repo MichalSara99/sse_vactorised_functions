@@ -10,6 +10,12 @@
     <Filter Include="external_src">
       <UniqueIdentifier>{32b4e9c9-dd96-494a-ae39-b2552cea9d84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="semd">
+      <UniqueIdentifier>{f08989ae-1d1d-45de-a814-f1bc30aad69e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal_tests">
+      <UniqueIdentifier>{67982986-f33c-4778-a60e-7ee80fc6ba05}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="external_headers\sse_macros.h">
@@ -35,6 +41,24 @@
     </ClInclude>
     <ClInclude Include="external_tests\trig_functions_et.h">
       <Filter>external_tests</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_tests\semd_t.h">
+      <Filter>internal_tests</Filter>
+    </ClInclude>
+    <ClInclude Include="semd\semd.h">
+      <Filter>semd</Filter>
+    </ClInclude>
+    <ClInclude Include="semd\semd_operations.h">
+      <Filter>semd</Filter>
+    </ClInclude>
+    <ClInclude Include="semd\semd_functions.h">
+      <Filter>semd</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_tests\semd_functions_t.h">
+      <Filter>internal_tests</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_tests\semd_operations_t.h">
+      <Filter>internal_tests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
