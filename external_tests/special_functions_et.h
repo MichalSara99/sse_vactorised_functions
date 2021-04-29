@@ -23,23 +23,24 @@ void testErfSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
+    x[1] = pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
     x[5] = 0.30;
     x[6] = 0.25;
     x[7] = 0.015;
     x[8] = 0.6;
     x[9] = 0.012;
-    x[10] = pi() / 4.0;
+    x[10] = pi / 4.0;
     x[11] = 0.56;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = 23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
     x[16] = 10.2;
 
     auto start_asm = std::chrono::system_clock::now();
@@ -82,28 +83,29 @@ void testErfSSEFloat()
     int const n = 16 + 1;
     std::size_t const align = 16;
 
-    double *x = sse_utility::aligned_alloc<double>(n, align);
-    double *res1 = sse_utility::aligned_alloc<double>(n, align);
-    double *res2 = sse_utility::aligned_alloc<double>(n, align);
+    float *x = sse_utility::aligned_alloc<float>(n, align);
+    float *res1 = sse_utility::aligned_alloc<float>(n, align);
+    float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
     x[0] = 0.0f;
-    x[1] = pi() / 2.0f;
-    x[2] = pi();
-    x[3] = 3.0f * pi() / 2.0f;
-    x[4] = 5.0f * pi() / 4.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
     x[5] = 0.30f;
     x[6] = 0.25f;
     x[7] = 0.015f;
     x[8] = 0.6f;
     x[9] = 0.012f;
-    x[10] = pi() / 4.0f;
+    x[10] = pi / 4.0f;
     x[11] = 0.56f;
     x[12] = 0.5f;
-    x[13] = pi() / 3.0f;
+    x[13] = pi / 3.0f;
     x[14] = 23.5f;
-    x[15] = 4.0f * pi() / 3.0f;
+    x[15] = 4.0f * pi / 3.0f;
     x[16] = 10.2f;
 
     auto start_asm = std::chrono::system_clock::now();
@@ -151,23 +153,24 @@ void testErfcSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
+    x[1] = pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
     x[5] = 0.30;
     x[6] = 0.25;
     x[7] = 0.015;
     x[8] = 0.6;
     x[9] = 0.012;
-    x[10] = pi() / 4.0;
+    x[10] = pi / 4.0;
     x[11] = 0.56;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = 23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
     x[16] = 10.2;
 
     auto start_asm = std::chrono::system_clock::now();
@@ -210,28 +213,29 @@ void testErfcSSEFloat()
     int const n = 16 + 1;
     std::size_t const align = 16;
 
-    double *x = sse_utility::aligned_alloc<double>(n, align);
-    double *res1 = sse_utility::aligned_alloc<double>(n, align);
-    double *res2 = sse_utility::aligned_alloc<double>(n, align);
+    float *x = sse_utility::aligned_alloc<float>(n, align);
+    float *res1 = sse_utility::aligned_alloc<float>(n, align);
+    float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
     x[0] = 0.0f;
-    x[1] = pi() / 2.0f;
-    x[2] = pi();
-    x[3] = 3.0f * pi() / 2.0f;
-    x[4] = 5.0f * pi() / 4.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
     x[5] = 0.30f;
     x[6] = 0.25f;
     x[7] = 0.015f;
     x[8] = 0.6f;
     x[9] = 0.012f;
-    x[10] = pi() / 4.0f;
+    x[10] = pi / 4.0f;
     x[11] = 0.56f;
     x[12] = 0.5f;
-    x[13] = pi() / 3.0f;
+    x[13] = pi / 3.0f;
     x[14] = 23.5f;
-    x[15] = 4.0f * pi() / 3.0f;
+    x[15] = 4.0f * pi / 3.0f;
     x[16] = 10.2f;
 
     auto start_asm = std::chrono::system_clock::now();

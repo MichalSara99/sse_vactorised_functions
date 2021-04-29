@@ -24,40 +24,41 @@ void testBasicMaxsSSEFloat()
     float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
-    x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = 2.0 * pi();
-    x[10] = pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
-    x[12] = 0.5;
-    x[13] = pi() / 3.0;
-    x[14] = -23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[0] = 0.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = 2.0f * pi;
+    x[10] = pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
+    x[12] = 0.5f;
+    x[13] = pi / 3.0f;
+    x[14] = -23.5f;
+    x[15] = 4.0f * pi / 3.0f;
 
-    y[0] = 0.0;
-    y[1] = pi() / 2.0;
-    y[2] = pi();
-    y[3] = 3.0 * pi() / 2.0;
-    y[4] = 5.0 * pi() / 4.0;
-    y[5] = 2.0 * pi();
-    y[6] = pi();
-    y[7] = 3.0 * pi();
-    y[8] = 6.0 * pi() / 3.0;
-    y[9] = 2.0 * pi();
-    y[10] = pi() / 4.0;
-    y[11] = 7.0 * pi() / 4.0;
-    y[12] = 0.5;
-    y[13] = 1.0 / 3.0;
-    y[14] = -23.5;
-    y[15] = 4.0 * pi() / 3.0;
+    y[0] = 0.0f;
+    y[1] = pi / 2.0f;
+    y[2] = pi;
+    y[3] = 3.0f * pi / 2.0f;
+    y[4] = 5.0f * pi / 4.0f;
+    y[5] = 2.0f * pi;
+    y[6] = pi;
+    y[7] = 3.0f * pi;
+    y[8] = 6.0f * pi / 3.0f;
+    y[9] = 2.0f * pi;
+    y[10] = pi / 4.0f;
+    y[11] = 7.0f * pi / 4.0f;
+    y[12] = 0.5f;
+    y[13] = 1.0f / 3.0f;
+    y[14] = -23.5f;
+    y[15] = 4.0f * pi / 3.0f;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = maxs_sse(x, y, n, res1);
@@ -105,40 +106,41 @@ void testBasicMaxsSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = 2.0 * pi();
-    x[10] = pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
+    x[1] = pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
+    x[5] = 2.0 * pi;
+    x[6] = 4.0 * pi;
+    x[7] = 3.0 * pi;
+    x[8] = 6.0 * pi / 3.0;
+    x[9] = 2.0 * pi;
+    x[10] = pi / 4.0;
+    x[11] = 7.0 * pi / 4.0;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = -23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
 
     y[0] = 0.0;
-    y[1] = pi() / 2.0;
-    y[2] = pi();
-    y[3] = 3.0 * pi() / 2.0;
-    y[4] = 5.0 * pi() / 4.0;
-    y[5] = 2.0 * pi();
-    y[6] = pi();
-    y[7] = 3.0 * pi();
-    y[8] = 6.0 * pi() / 3.0;
-    y[9] = 2.0 * pi();
-    y[10] = pi() / 4.0;
-    y[11] = 7.0 * pi() / 4.0;
+    y[1] = pi / 2.0;
+    y[2] = pi;
+    y[3] = 3.0 * pi / 2.0;
+    y[4] = 5.0 * pi / 4.0;
+    y[5] = 2.0 * pi;
+    y[6] = pi;
+    y[7] = 3.0 * pi;
+    y[8] = 6.0 * pi / 3.0;
+    y[9] = 2.0 * pi;
+    y[10] = pi / 4.0;
+    y[11] = 7.0 * pi / 4.0;
     y[12] = 0.5;
     y[13] = 1.0 / 3.0;
     y[14] = -23.5;
-    y[15] = 4.0 * pi() / 3.0;
+    y[15] = 4.0 * pi / 3.0;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = maxs_sse(x, y, n, res1);
@@ -187,40 +189,41 @@ void testBasicMinsSSEFloat()
     float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
-    x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = 2.0 * pi();
-    x[10] = pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
-    x[12] = 0.5;
-    x[13] = pi() / 3.0;
-    x[14] = -23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[0] = 0.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = 2.0f * pi;
+    x[10] = pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
+    x[12] = 0.5f;
+    x[13] = pi / 3.0f;
+    x[14] = -23.5f;
+    x[15] = 4.0f * pi / 3.0f;
 
-    y[0] = 0.0;
-    y[1] = pi() / 2.0;
-    y[2] = pi();
-    y[3] = 3.0 * pi() / 2.0;
-    y[4] = 5.0 * pi() / 4.0;
-    y[5] = 2.0 * pi();
-    y[6] = pi();
-    y[7] = 3.0 * pi();
-    y[8] = 6.0 * pi() / 3.0;
-    y[9] = 2.0 * pi();
-    y[10] = pi() / 4.0;
-    y[11] = 7.0 * pi() / 4.0;
-    y[12] = 0.5;
-    y[13] = 1.0 / 3.0;
-    y[14] = -23.5;
-    y[15] = 4.0 * pi() / 3.0;
+    y[0] = 0.0f;
+    y[1] = pi / 2.0f;
+    y[2] = pi;
+    y[3] = 3.0f * pi / 2.0f;
+    y[4] = 5.0f * pi / 4.0f;
+    y[5] = 2.0f * pi;
+    y[6] = pi;
+    y[7] = 3.0f * pi;
+    y[8] = 6.0f * pi / 3.0f;
+    y[9] = 2.0f * pi;
+    y[10] = pi / 4.0f;
+    y[11] = 7.0f * pi / 4.0f;
+    y[12] = 0.5f;
+    y[13] = 1.0f / 3.0f;
+    y[14] = -23.5f;
+    y[15] = 4.0f * pi / 3.0f;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = mins_sse(x, y, n, res1);
@@ -268,40 +271,41 @@ void testBasicMinsSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = 2.0 * pi();
-    x[10] = pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
+    x[1] = pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
+    x[5] = 2.0 * pi;
+    x[6] = 4.0 * pi;
+    x[7] = 3.0 * pi;
+    x[8] = 6.0 * pi / 3.0;
+    x[9] = 2.0 * pi;
+    x[10] = pi / 4.0;
+    x[11] = 7.0 * pi / 4.0;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = -23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
 
     y[0] = 0.0;
-    y[1] = pi() / 2.0;
-    y[2] = pi();
-    y[3] = 3.0 * pi() / 2.0;
-    y[4] = 5.0 * pi() / 4.0;
-    y[5] = 2.0 * pi();
-    y[6] = pi();
-    y[7] = 3.0 * pi();
-    y[8] = 6.0 * pi() / 3.0;
-    y[9] = 2.0 * pi();
-    y[10] = pi() / 4.0;
-    y[11] = 7.0 * pi() / 4.0;
+    y[1] = pi / 2.0;
+    y[2] = pi;
+    y[3] = 3.0 * pi / 2.0;
+    y[4] = 5.0 * pi / 4.0;
+    y[5] = 2.0 * pi;
+    y[6] = pi;
+    y[7] = 3.0 * pi;
+    y[8] = 6.0 * pi / 3.0;
+    y[9] = 2.0 * pi;
+    y[10] = pi / 4.0;
+    y[11] = 7.0 * pi / 4.0;
     y[12] = 0.5;
     y[13] = 1.0 / 3.0;
     y[14] = -23.5;
-    y[15] = 4.0 * pi() / 3.0;
+    y[15] = 4.0 * pi / 3.0;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = mins_sse(x, y, n, res1);
@@ -341,7 +345,7 @@ void testBasicMinsSSEDouble()
 void testBasicSqrtSSEDouble()
 {
 
-    int const n = 16 - 1;
+    int const n = 16;
     std::size_t const align = 16;
 
     double *x = sse_utility::aligned_alloc<double>(n, align);
@@ -349,23 +353,24 @@ void testBasicSqrtSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = 0.05;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = 2.0 * pi();
-    x[10] = pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
+    x[1] = pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
+    x[5] = 2.0 * pi;
+    x[6] = 4.0 * pi;
+    x[7] = 3.0 * pi;
+    x[8] = 6.0 * pi / 3.0;
+    x[9] = 2.0 * pi;
+    x[10] = pi / 4.0;
+    x[11] = 7.0 * pi / 4.0;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = 23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = sqrt_sse(x, n, res1);
@@ -412,24 +417,25 @@ void testBasicSqrtSSEFloat()
     float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
-    x[0] = 0.05;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = 2.0 * pi();
-    x[10] = pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
-    x[12] = 0.5;
-    x[13] = pi() / 3.0;
-    x[14] = 23.5;
-    x[15] = 4.0 * pi() / 3.0;
-    x[16] = 25.0;
+    x[0] = 0.05f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = 2.0f * pi;
+    x[10] = pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
+    x[12] = 0.5f;
+    x[13] = pi / 3.0f;
+    x[14] = 23.5f;
+    x[15] = 4.0f * pi / 3.0f;
+    x[16] = 25.0f;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = sqrt_sse(x, n, res1);
@@ -476,23 +482,24 @@ void testBasicAbsSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = -10.0;
-    x[1] = -pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = -2.0 * pi();
-    x[10] = -pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
+    x[1] = -pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
+    x[5] = 2.0 * pi;
+    x[6] = 4.0 * pi;
+    x[7] = 3.0 * pi;
+    x[8] = 6.0 * pi / 3.0;
+    x[9] = -2.0 * pi;
+    x[10] = -pi / 4.0;
+    x[11] = 7.0 * pi / 4.0;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = 23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = abs_sse(x, n, res1);
@@ -539,23 +546,24 @@ void testBasicAbsSSEFloat()
     float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
     x[0] = 0.0f;
-    x[1] = pi() / 2.0f;
-    x[2] = -pi();
-    x[3] = 3.0f * pi() / 2.0f;
-    x[4] = -5.0f * pi() / 4.0f;
-    x[5] = 2.0f * pi();
-    x[6] = 4.0f * pi();
-    x[7] = 3.0f * pi();
-    x[8] = 6.0f * pi() / 3.0f;
-    x[9] = -2.0f * pi();
-    x[10] = -pi() / 4.0f;
-    x[11] = 7.0f * pi() / 4.0f;
+    x[1] = pi / 2.0f;
+    x[2] = -pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = -5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = -2.0f * pi;
+    x[10] = -pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
     x[12] = 0.5f;
-    x[13] = pi() / 3.0f;
+    x[13] = pi / 3.0f;
     x[14] = 23.5f;
-    x[15] = 4.0f * pi() / 3.0f;
+    x[15] = 4.0f * pi / 3.0f;
     x[16] = -10000.0;
 
     auto start_asm = std::chrono::system_clock::now();
@@ -603,23 +611,24 @@ void testBasicSqrpowSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = -0.05;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = 2.0 * pi();
-    x[10] = pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
+    x[1] = pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
+    x[5] = 2.0 * pi;
+    x[6] = 4.0 * pi;
+    x[7] = 3.0 * pi;
+    x[8] = 6.0 * pi / 3.0;
+    x[9] = 2.0 * pi;
+    x[10] = pi / 4.0;
+    x[11] = 7.0 * pi / 4.0;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = 23.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
     x[16] = 100.2;
 
     auto start_asm = std::chrono::system_clock::now();
@@ -667,24 +676,25 @@ void testBasicSqrpowSSEFloat()
     float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
-    x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = 2.0 * pi();
-    x[10] = pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
-    x[12] = 0.5;
-    x[13] = pi() / 3.0;
-    x[14] = 23.5;
-    x[15] = 4.0 * pi() / 3.0;
-    x[16] = 4.0;
+    x[0] = 0.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = 2.0f * pi;
+    x[10] = pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
+    x[12] = 0.5f;
+    x[13] = pi / 3.0f;
+    x[14] = 23.5f;
+    x[15] = 4.0f * pi / 3.0f;
+    x[16] = 4.0f;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = sqrpow_sse(x, n, res1);

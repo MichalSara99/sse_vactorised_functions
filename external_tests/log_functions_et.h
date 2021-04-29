@@ -24,24 +24,25 @@ void testBasicLogSSEFloat()
     float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
     x[0] = 0.5f;
-    x[1] = pi() / 2.0f;
-    x[2] = pi();
-    x[3] = 3.0f * pi() / 2.0f;
-    x[4] = 5.0f * pi() / 4.0f;
-    x[5] = 2.0f * pi();
-    x[6] = 4.0f * pi();
-    x[7] = 3.0f * pi();
-    x[8] = 6.0f * pi() / 3.0f;
-    x[9] = -2.0f * pi();
-    x[10] = -pi() / 4.0f;
-    x[11] = 7.0f * pi() / 4.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = -2.0f * pi;
+    x[10] = -pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
     x[12] = 0.5f;
-    x[13] = pi() / 3.0f;
+    x[13] = pi / 3.0f;
     x[14] = 23.5f;
-    x[15] = 4.0f * pi() / 3.0f;
-    x[16] = 10.2;
+    x[15] = 4.0f * pi / 3.0f;
+    x[16] = 10.2f;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = log_sse(x, n, res1);
@@ -88,23 +89,24 @@ void testBasicLogSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = 0.2f;
-    x[1] = pi() / 2.0f;
-    x[2] = pi();
-    x[3] = 3.0f * pi() / 2.0f;
-    x[4] = 5.0f * pi() / 4.0f;
-    x[5] = 2.0f * pi();
-    x[6] = 4.0f * pi();
-    x[7] = 3.0f * pi();
-    x[8] = 6.0f * pi() / 3.0f;
-    x[9] = -2.0f * pi();
-    x[10] = -pi() / 4.0f;
-    x[11] = 7.0f * pi() / 4.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = -2.0f * pi;
+    x[10] = -pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
     x[12] = 0.5f;
-    x[13] = pi() / 3.0f;
+    x[13] = pi / 3.0f;
     x[14] = 23.5f;
-    x[15] = 4.0f * pi() / 3.0f;
+    x[15] = 4.0f * pi / 3.0f;
     x[16] = 10.2;
 
     auto start_asm = std::chrono::system_clock::now();

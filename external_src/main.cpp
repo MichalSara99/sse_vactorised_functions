@@ -76,6 +76,8 @@ int main(int argc, char const *argv[])
     // testBasicAddSSEFloat();
     // testBasicMulSSEFloat();
     // testBasicMulSSEDouble();
+    // testBasicDivSSEDouble();
+    // testBasicDivSSEFloat();
 
     // ==================================================
     // ==================================================

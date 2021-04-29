@@ -14,11 +14,12 @@ using namespace sse_normal_distribution;
 
 float norm_cdf(float x)
 {
+    const float pi = sse_constants::pi<float>();
     float ind = 0.0f;
     if (x <= 0.0f)
         ind = 1.0f;
     x = std::abs(x);
-    float const cst = 1.0f / (std::sqrt(2.0f * pi()));
+    float const cst = 1.0f / (std::sqrt(2.0f * pi));
     float const first = std::exp(-0.5f * x * x);
     float const second = 0.226f + 0.64f * x + 0.33f * std::sqrt(x * x + 3.0f);
     float const res = 1.0f - ((first / second) * cst);
@@ -27,11 +28,12 @@ float norm_cdf(float x)
 
 double norm_cdf(double x)
 {
+    const double pi = sse_constants::pi<double>();
     double ind = 0.0;
     if (x <= 0.0)
         ind = 1.0;
     x = std::abs(x);
-    double const cst = 1.0 / (std::sqrt(2.0 * pi()));
+    double const cst = 1.0 / (std::sqrt(2.0 * pi));
     double const first = std::exp(-0.5 * x * x);
     double const second = 0.226 + 0.64 * x + 0.33 * std::sqrt(x * x + 3.0);
     double const res = 1.0 - ((first / second) * cst);
@@ -49,23 +51,24 @@ void testBasicNormCDFSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = -2.0 * pi();
-    x[10] = -pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
+    x[1] = pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
+    x[5] = 2.0 * pi;
+    x[6] = 4.0 * pi;
+    x[7] = 3.0 * pi;
+    x[8] = 6.0 * pi / 3.0;
+    x[9] = -2.0 * pi;
+    x[10] = -pi / 4.0;
+    x[11] = 7.0 * pi / 4.0;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = 3.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
     x[16] = 10.2;
 
     auto start_asm = std::chrono::system_clock::now();
@@ -113,24 +116,25 @@ void testBasicNormCDFSSEFloat()
     float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
     x[0] = 0.0f;
-    x[1] = pi() / 2.0f;
-    x[2] = pi();
-    x[3] = 3.0f * pi() / 2.0f;
-    x[4] = 5.0f * pi() / 4.0f;
-    x[5] = 2.0f * pi();
-    x[6] = 4.0f * pi();
-    x[7] = 3.0f * pi();
-    x[8] = 6.0f * pi() / 3.0f;
-    x[9] = -2.0f * pi();
-    x[10] = -pi() / 4.0f;
-    x[11] = 7.0f * pi() / 4.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = -2.0f * pi;
+    x[10] = -pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
     x[12] = 0.5f;
-    x[13] = pi() / 3.0f;
+    x[13] = pi / 3.0f;
     x[14] = 3.5f;
-    x[15] = 4.0f * pi() / 3.0f;
-    x[16] = 10.2;
+    x[15] = 4.0f * pi / 3.0f;
+    x[16] = 10.2f;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = norm_cdf_sse(x, n, res1);
@@ -168,14 +172,16 @@ void testBasicNormCDFSSEFloat()
 
 float norm_pdf(float x)
 {
-    float const cst = 1.0f / (std::sqrt(2.0f * pi()));
+    const float pi = sse_constants::pi<float>();
+    float const cst = 1.0f / (std::sqrt(2.0f * pi));
     float const first = std::exp(-0.5f * x * x);
     return cst * first;
 }
 
 double norm_pdf(double x)
 {
-    double const cst = 1.0 / (std::sqrt(2.0 * pi()));
+    const double pi = sse_constants::pi<double>();
+    double const cst = 1.0 / (std::sqrt(2.0 * pi));
     double const first = std::exp(-0.5 * x * x);
     return cst * first;
 }
@@ -191,23 +197,24 @@ void testBasicNormPDFSSEDouble()
     double *res2 = sse_utility::aligned_alloc<double>(n, align);
 
     // test some basic known values:
+    const double pi = sse_constants::pi<double>();
 
     x[0] = 0.0;
-    x[1] = pi() / 2.0;
-    x[2] = pi();
-    x[3] = 3.0 * pi() / 2.0;
-    x[4] = 5.0 * pi() / 4.0;
-    x[5] = 2.0 * pi();
-    x[6] = 4.0 * pi();
-    x[7] = 3.0 * pi();
-    x[8] = 6.0 * pi() / 3.0;
-    x[9] = -2.0 * pi();
-    x[10] = -pi() / 4.0;
-    x[11] = 7.0 * pi() / 4.0;
+    x[1] = pi / 2.0;
+    x[2] = pi;
+    x[3] = 3.0 * pi / 2.0;
+    x[4] = 5.0 * pi / 4.0;
+    x[5] = 2.0 * pi;
+    x[6] = 4.0 * pi;
+    x[7] = 3.0 * pi;
+    x[8] = 6.0 * pi / 3.0;
+    x[9] = -2.0 * pi;
+    x[10] = -pi / 4.0;
+    x[11] = 7.0 * pi / 4.0;
     x[12] = 0.5;
-    x[13] = pi() / 3.0;
+    x[13] = pi / 3.0;
     x[14] = 3.5;
-    x[15] = 4.0 * pi() / 3.0;
+    x[15] = 4.0 * pi / 3.0;
     x[16] = 10.3;
 
     auto start_asm = std::chrono::system_clock::now();
@@ -255,24 +262,25 @@ void testBasicNormPDFSSEFloat()
     float *res2 = sse_utility::aligned_alloc<float>(n, align);
 
     // test some basic known values:
+    const float pi = sse_constants::pi<float>();
 
     x[0] = 0.0f;
-    x[1] = pi() / 2.0f;
-    x[2] = pi();
-    x[3] = 3.0f * pi() / 2.0f;
-    x[4] = 5.0f * pi() / 4.0f;
-    x[5] = 2.0f * pi();
-    x[6] = 4.0f * pi();
-    x[7] = 3.0f * pi();
-    x[8] = 6.0f * pi() / 3.0f;
-    x[9] = -2.0f * pi();
-    x[10] = -pi() / 4.0f;
-    x[11] = 7.0f * pi() / 4.0f;
+    x[1] = pi / 2.0f;
+    x[2] = pi;
+    x[3] = 3.0f * pi / 2.0f;
+    x[4] = 5.0f * pi / 4.0f;
+    x[5] = 2.0f * pi;
+    x[6] = 4.0f * pi;
+    x[7] = 3.0f * pi;
+    x[8] = 6.0f * pi / 3.0f;
+    x[9] = -2.0f * pi;
+    x[10] = -pi / 4.0f;
+    x[11] = 7.0f * pi / 4.0f;
     x[12] = 0.5f;
-    x[13] = pi() / 3.0f;
+    x[13] = pi / 3.0f;
     x[14] = 3.5f;
-    x[15] = 4.0f * pi() / 3.0f;
-    x[16] = 10.3;
+    x[15] = 4.0f * pi / 3.0f;
+    x[16] = 10.3f;
 
     auto start_asm = std::chrono::system_clock::now();
     bool rc1 = norm_pdf_sse(x, n, res1);
