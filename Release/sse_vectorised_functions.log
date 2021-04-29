@@ -1,8 +1,8 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (sse_vectorised_functions_tests.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
   Generating code
-  23 of 117 functions (19.7%) were compiled, the rest were copied from previous compilation.
+  5 of 124 functions ( 4.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   sse_vectorised_functions.vcxproj -> D:\my_c_files\sse_vectorised_functions\sse_vectorised_functions\Release\sse_vectorised_functions.exe

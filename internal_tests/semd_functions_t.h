@@ -6,11 +6,14 @@
 #include <iostream>
 #include <random>
 
+#define __DEBUG_
+
 template <typename T> void testSemdSin()
 {
+
     std::uniform_real_distribution<T> unif(-50.0, 38.05);
     std::default_random_engine re;
-    const int n = 1025;
+    const int n = 100000;
     std::vector<T> v1(n);
     for (std::size_t t = 0; t < n; ++t)
     {
@@ -33,10 +36,12 @@ template <typename T> void testSemdSin()
     auto end_cpp = std::chrono::system_clock::now();
     auto elapsed_cpp = std::chrono::duration<T>(end_cpp - start_cpp).count();
 
+#ifdef _SEE_VALUES_
     for (std::size_t t = 0; t < s1.size(); ++t)
     {
         std::cout << t << ": " << r[t] << "|" << res[t] << "| " << (r[t] - res[t]) << "\n";
     }
+#endif
     std::cout << "\n";
     std::cout << "=========================================================\n\n";
     std::cout << "\n"
@@ -49,7 +54,7 @@ template <typename T> void testSemdCos()
 {
     std::uniform_real_distribution<T> unif(-50.0, 38.05);
     std::default_random_engine re;
-    const int n = 1025;
+    const int n = 100000;
     std::vector<T> v1(n);
     for (std::size_t t = 0; t < n; ++t)
     {
@@ -72,10 +77,12 @@ template <typename T> void testSemdCos()
     auto end_cpp = std::chrono::system_clock::now();
     auto elapsed_cpp = std::chrono::duration<T>(end_cpp - start_cpp).count();
 
+#ifdef _SEE_VALUES_
     for (std::size_t t = 0; t < s1.size(); ++t)
     {
         std::cout << t << ": " << r[t] << "|" << res[t] << "| " << (r[t] - res[t]) << "\n";
     }
+#endif
     std::cout << "\n";
     std::cout << "=========================================================\n\n";
     std::cout << "\n"
@@ -88,7 +95,7 @@ template <typename T> void testSemdExpFast()
 {
     std::uniform_real_distribution<T> unif(-50.0, 38.05);
     std::default_random_engine re;
-    const int n = 1025;
+    const int n = 100000;
     std::vector<T> v1(n);
     for (std::size_t t = 0; t < n; ++t)
     {
@@ -110,11 +117,12 @@ template <typename T> void testSemdExpFast()
     }
     auto end_cpp = std::chrono::system_clock::now();
     auto elapsed_cpp = std::chrono::duration<T>(end_cpp - start_cpp).count();
-
+#ifdef _SEE_VALUES_
     for (std::size_t t = 0; t < s1.size(); ++t)
     {
         std::cout << t << ": " << r[t] << "|" << res[t] << "| " << (r[t] - res[t]) << "\n";
     }
+#endif
     std::cout << "\n";
     std::cout << "=========================================================\n\n";
     std::cout << "\n"
@@ -127,7 +135,7 @@ template <typename T> void testSemdExp()
 {
     std::uniform_real_distribution<T> unif(-50.0, 38.05);
     std::default_random_engine re;
-    const int n = 1025;
+    const int n = 100000;
     std::vector<T> v1(n);
     for (std::size_t t = 0; t < n; ++t)
     {
@@ -149,11 +157,12 @@ template <typename T> void testSemdExp()
     }
     auto end_cpp = std::chrono::system_clock::now();
     auto elapsed_cpp = std::chrono::duration<T>(end_cpp - start_cpp).count();
-
+#ifdef _SEE_VALUES_
     for (std::size_t t = 0; t < s1.size(); ++t)
     {
         std::cout << t << ": " << r[t] << "|" << res[t] << "| " << (r[t] - res[t]) << "\n";
     }
+#endif
     std::cout << "\n";
     std::cout << "=========================================================\n\n";
     std::cout << "\n"
@@ -166,7 +175,7 @@ template <typename T> void testSemdLog()
 {
     std::uniform_real_distribution<T> unif(-1.0, 38.05);
     std::default_random_engine re;
-    const int n = 1025;
+    const int n = 100000;
     std::vector<T> v1(n);
     for (std::size_t t = 0; t < n; ++t)
     {
@@ -188,11 +197,12 @@ template <typename T> void testSemdLog()
     }
     auto end_cpp = std::chrono::system_clock::now();
     auto elapsed_cpp = std::chrono::duration<T>(end_cpp - start_cpp).count();
-
+#ifdef _SEE_VALUES_
     for (std::size_t t = 0; t < s1.size(); ++t)
     {
         std::cout << t << ": " << r[t] << "|" << res[t] << "| " << (r[t] - res[t]) << "\n";
     }
+#endif
     std::cout << "\n";
     std::cout << "=========================================================\n\n";
     std::cout << "\n"

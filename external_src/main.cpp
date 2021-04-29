@@ -41,11 +41,11 @@ int main(int argc, char const *argv[])
 
     // ===================================================
     // ================== semd_functions.h ==============
-    // testSemdSin<double>();
-    // testSemdCos<double>();
-    // testSemdExpFast<double>();
-    // testSemdExp<double>();
-    // testSemdLog<double>();
+    testSemdSin<double>();
+    testSemdCos<double>();
+    testSemdExpFast<double>();
+    testSemdExp<double>();
+    testSemdLog<double>();
 
     /// ==========================================================
     /// =================== EXTERNAL TESTS =======================
