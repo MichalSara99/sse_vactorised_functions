@@ -8,7 +8,7 @@
 #include <random>
 #include <sse_math_x86_lib.h>
 
-#include "external_headers/sse_macros.h"
+#include "macros/sse_macros.h"
 
 using namespace sse_normal_distribution;
 

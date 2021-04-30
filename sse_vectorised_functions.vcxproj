@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="external_headers\sse_macros.h" />
     <ClInclude Include="external_tests\basic_functions_et.h" />
     <ClInclude Include="external_tests\basic_operations_et.h" />
     <ClInclude Include="external_tests\exp_functions_et.h" />
@@ -27,10 +26,14 @@
     <ClInclude Include="external_tests\normal_dist_functions_et.h" />
     <ClInclude Include="external_tests\special_functions_et.h" />
     <ClInclude Include="external_tests\trig_functions_et.h" />
+    <ClInclude Include="internal_tests\semd_distributions_t.h" />
     <ClInclude Include="internal_tests\semd_operations_t.h" />
     <ClInclude Include="internal_tests\semd_functions_t.h" />
+    <ClInclude Include="internal_tests\semd_popular_t.h" />
     <ClInclude Include="internal_tests\semd_t.h" />
+    <ClInclude Include="macros\sse_macros.h" />
     <ClInclude Include="semd\semd.h" />
+    <ClInclude Include="semd\semd_distributions.h" />
     <ClInclude Include="semd\semd_functions.h" />
     <ClInclude Include="semd\semd_operations.h" />
   </ItemGroup>
@@ -118,7 +121,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Full</Optimization>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
@@ -146,6 +149,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <Optimization>Full</Optimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -170,7 +174,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Full</Optimization>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
@@ -198,6 +202,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <Optimization>Full</Optimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

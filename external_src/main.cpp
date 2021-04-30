@@ -11,8 +11,10 @@
 #include "external_tests/trig_functions_et.h"
 
 // INTERNAl TESTS:
+#include "internal_tests/semd_distributions_t.h"
 #include "internal_tests/semd_functions_t.h"
 #include "internal_tests/semd_operations_t.h"
+#include "internal_tests/semd_popular_t.h"
 #include "internal_tests/semd_t.h"
 
 int main(int argc, char const *argv[])
@@ -36,16 +38,39 @@ int main(int argc, char const *argv[])
 
     // ===================================================
     // ================== semd_operations.h ==============
+
     // testSemdOperationsAdd<double>();
     // testSemdOperationsSub<double>();
+    // testSemdOperationsMul<double>();
+    // testSemdOperationsDiv<double>();
 
     // ===================================================
     // ================== semd_functions.h ==============
-    testSemdSin<double>();
-    testSemdCos<double>();
-    testSemdExpFast<double>();
-    testSemdExp<double>();
-    testSemdLog<double>();
+
+    // testSemdSin<double>();
+    // testSemdCos<double>();
+    // testSemdExpFast<double>();
+    // testSemdExp<double>();
+    // testSemdLog<double>();
+    // testSemdAbs<double>();
+    // testSemdSqrt<double>();
+    // testSemdMins<double>();
+    // testSemdMaxs<double>();
+    // testSemdSqrPow<double>();
+    // testSemdErf<double>();
+    // testSemdErfc<double>();
+
+    // ===================================================
+    // ================ semd_distributions_t.h ===========
+
+    // testSemdNormCDF<double>();
+    // testSemdNormPDF<double>();
+    // testSemdNormInvCDF<double>();
+
+    // ===================================================
+    // ================== semd_popular_t.h ===============
+
+    // testBlackScholesPrice<double>();
 
     /// ==========================================================
     /// =================== EXTERNAL TESTS =======================
@@ -106,12 +131,24 @@ int main(int argc, char const *argv[])
     // testBasicNegSSEDouble();
     // testBasicSubSSEDouble();
     // testBasicSubSSEFloat();
+    // testBasicBroadcastSubSSEDouble();
+    // testBasicBroadcastSubSSEFloat();
+    // testBasicBroadcastSSubSSEDouble();
+    // testBasicBroadcastSSubSSEFloat();
     // testBasicAddSSEDouble();
     // testBasicAddSSEFloat();
+    // testBasicBroadcastAddSSEDouble();
+    // testBasicBroadcastAddSSEFloat();
     // testBasicMulSSEFloat();
     // testBasicMulSSEDouble();
+    // testBasicBroadcastMulSSEDouble();
+    // testBasicBroadcastMulSSEFloat();
     // testBasicDivSSEDouble();
     // testBasicDivSSEFloat();
+    // testBasicBroadcastDivSSEDouble();
+    // testBasicBroadcastDivSSEFloat();
+    // testBasicBroadcastSDivSSEDouble();
+    // testBasicBroadcastSDivSSEFloat();
 
     // ==================================================
     // ==================================================
